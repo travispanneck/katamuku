@@ -1,27 +1,28 @@
-var cardCount = 0;
+var count = 0;
 
-function cc(card) {
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      cardCount += 1;
-      break;
-    case 7:
-    case 8:
-    case 9:
-      cardCount += 0;
-      break;
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-    case "A":
-      cardCount -= 1;
+function betOrHold () {
+  if (count > 0) {
+    document.getElementById('decision').textContent= "Bet";
+  } else if (count < 0) {
+    document.getElementById('decision').textContent= "Hold";
+  } else {
+    document.getElementById('decision').textContent= "No guidance";
   }
-  return cardCount + (cardCount > 0 ? " Bet" : " Hold");
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+function posButton() {
+  count++;
+  document.getElementById('currentCount').textContent= count;
+  return function () {
+    betOrHold();
+  }
+}
+
+function negButton() {
+  count--;
+  document.getElementById('currentCount').textContent= count;
+  return function () {
+    betOrHold();
+  }
+}

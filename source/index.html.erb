@@ -10,8 +10,8 @@ title: Welcome to Katamuku!
 
   <div class="welcome">
     <div class="card">
-      <p class="decision">Bet</p>
-      <p class="currentCount">Current Count 0</p>
+      <p id="decision">Bet</p>
+      <p id="currentCount">0</p>
     </div>
   </div>
 
@@ -30,15 +30,10 @@ title: Welcome to Katamuku!
   <section class="buttons">
     <div class="grid">
       <div class="grid__row">
-        <a href="#" id="negative"><div class="grid__item negative">2, 3, 4, 5, 6</div></a>
-        <a href="#" id="neutral"><div class="grid__item neutral">7, 8, 9</div></a>
-        <a href="#" id="plus"><div class="grid__item plus">10, Face Cards, Ace</div></a>
+        <a href="#" id="negative" onclick="return posButton();"><div class="grid__item negative">2, 3, 4, 5, 6</div></a>
+        <a href="#" id="neutral" onclick="return neutralButton();"><div class="grid__item neutral">7, 8, 9</div></a>
+        <a href="#" id="plus" onclick="return negButton();"><div class="grid__item plus">10, Face Cards, Ace</div></a>
       </div>
     </div>
   </section>
-
-    <p class="doc">
-      <%#= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-    </p><!-- .doc -->
-  </div><!-- .welcome -->
-</div>
+  </div>
