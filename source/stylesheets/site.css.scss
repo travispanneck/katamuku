@@ -10,6 +10,10 @@ body {
   overflow: hidden;
 }
 
+.logo {
+  font-family: 'Lobster', cursive;
+}
+
 .logo img {
   height: 18.75em;
   margin-top: 6em;
@@ -20,6 +24,11 @@ h1 {
   font-size: 1.8em;
   font-weight: 400;
   margin: 0;
+}
+
+h4 {
+  font-style: italic;
+  color: #757575;
 }
 
 .doc {
@@ -67,10 +76,6 @@ h1 {
   }
 }
 
-.grid {
-  border: solid 1px #e7e7e7;
-}
-
 .grid__row {
   display: flex;
   .plus {
@@ -82,8 +87,9 @@ h1 {
   .neutral {
     background: #fff;
     color: #000;
+    margin: 0 20px;
       &:hover {
-      background: #eee;
+      background: #ababab;
     }
   }
   .negative {
@@ -111,6 +117,11 @@ section {
 .buttons {
   line-height: 70px;
   border-radius: 5px;
+  a {
+    text-decoration: none;
+    flex: 1;
+    color: #eee;
+  }
 }
 
 .card {
