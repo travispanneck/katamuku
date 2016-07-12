@@ -11,7 +11,6 @@ page '/*.txt', layout: false
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
-page "/README", :directory_index => false
 
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
