@@ -10,13 +10,8 @@ body {
   overflow: hidden;
 }
 
-.logo {
-  font-family: 'Lobster', cursive;
-}
-
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+a {
+  text-decoration: none;
 }
 
 h1 {
@@ -31,73 +26,18 @@ h4 {
   color: #757575;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
-    }
-  }
+.logo {
+  font-family: 'Lobster', cursive;
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
+.logo img {
+  height: 18.75em;
+  margin-top: 6em;
 }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
 
 .grid__row {
   display: flex;
-  .plus {
-    background: #ca4141;
-      &:hover {
-        background: #e26a6a;
-      }
-  }
-  .neutral {
-    background: #fff;
-    color: #000;
-    margin: 0 20px;
-      &:hover {
-      background: #ababab;
-    }
-  }
-  .negative {
-    background: #3e923e;
-      &:hover {
-      background: #a0d8a0;
-    }
-  }
 }
 
 .grid__item {
@@ -123,8 +63,9 @@ h4 {
   display: block;
   width: 250px;
   margin: 0 auto;
-  height: 340px;
+  height: 100%;
   border-radius: 5px;
+  text-decoration: none;
   background: #eee;
   color: #000;
   p {
@@ -137,5 +78,29 @@ h4 {
     background: #87c387;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+  }
+  .plus {
+    background: #ca4141;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;;
+      &:hover {
+        background: #e26a6a;
+      }
+  }
+  .neutral {
+    background: #fff;
+    padding: 20px;
+    color: #000;
+      &:hover {
+      background: #ababab;
+    }
+  }
+  .negative {
+    background: #3e923e;
+    padding: 20px;
+      &:hover {
+      background: #a0d8a0;
+    }
   }
 }
