@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Welcome to Katamuku!</title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <script src="javascripts/countingcards.js"></script>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="index">
+    <div class="container">
+
+  <h1><span class="logo">Katamuku</span>, don't go on tilt.</h1>
+  <h4>Let's do some card counting!</h4>
+
+  <div class="welcome">
+    <div class="card">
+      <p id="decision">Bet</p>
+      <p id="currentCount">0</p>
+        <a href="#" id="negative" onclick="return posButton();"><div class="grid__item negative">2 3 4 5 6</div></a>
+        <a href="#" id="neutral" onclick="return neutralButton();"><div class="grid__item neutral">7 8 9</div></a>
+        <a href="#" id="plus" onclick="return negButton();"><div class="grid__item plus">10 / Face Cards / Ace</div></a>
+    </div>
+  </div>
+
+  <section class="detail">
+    <div class="grid">
+      <div class="grid__row">
+        <div class="grid__item">
+          <p>
+            When the count is positive, you should bet. When the count is zero or negative, hold.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  </body>
+</html>
