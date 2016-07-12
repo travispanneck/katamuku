@@ -12,6 +12,9 @@ body {
 
 a {
   text-decoration: none;
+  &:active {
+    color: #fff;
+  }
 }
 
 h1 {
@@ -46,17 +49,7 @@ h4 {
 }
 
 .container {
-  padding: 40px;;
-}
-
-.buttons {
-  line-height: 70px;
-  border-radius: 5px;
-  a {
-    text-decoration: none;
-    flex: 1;
-    color: #eee;
-  }
+  padding: 40px;
 }
 
 .card {
@@ -79,8 +72,10 @@ h4 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   }
+
   .plus {
     background: #ca4141;
+    color: #fff;
     padding: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;;
@@ -99,6 +94,7 @@ h4 {
   .negative {
     background: #3e923e;
     padding: 20px;
+    color: #fff;
       &:hover {
       background: #a0d8a0;
     }

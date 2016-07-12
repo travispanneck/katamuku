@@ -10,19 +10,14 @@ function betOrHold () {
   }
 }
 
-
 function posButton() {
   count++;
   document.getElementById('currentCount').textContent= count;
-  return function () {
-    betOrHold();
-  }
+  betOrHold();
 }
 
 function negButton() {
   count--;
   document.getElementById('currentCount').textContent= count;
-  return function () {
-    betOrHold();
-  }
+  betOrHold();
 }
