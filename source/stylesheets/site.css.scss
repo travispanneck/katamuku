@@ -7,11 +7,11 @@ body {
   text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  overflow: hidden;
 }
 
 a {
   text-decoration: none;
+  color: #fff;
   &:active {
     color: #fff;
   }
@@ -103,4 +103,18 @@ h4 {
 
 .warning {
   background: yellow;
+}
+
+#poker-explanation {
+  padding-top: 20px;
+  text-align: left;
+}
+
+#poker-explanation:not(:target) {
+  display: none;
+  text-align: left;
+}
+
+#poker-explanation:target {
+  display: block;
 }

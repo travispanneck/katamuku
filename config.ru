@@ -3,7 +3,6 @@ require 'middleman-core/load_paths'
 
 require 'middleman-core'
 require 'middleman-core/rack'
-require 'middleman-gh-pages'
 
 require 'fileutils'
 FileUtils.mkdir('log') unless File.exist?('log')
