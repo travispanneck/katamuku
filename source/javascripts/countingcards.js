@@ -1,26 +1,18 @@
 var count = 0;
+var byId = function(id) { return document.getElementById(id) };
+function setBet(x,y) { bet = x; rgb = y; }
 
-function betOrHold () {
-  if (count > 0) {
-    document.getElementById('decision').textContent= "Bet";
-    document.getElementById('decision').style.backgroundColor = "rgb(135, 195, 135)";
-  } else if (count < 0) {
-    document.getElementById('decision').textContent= "Hold";
-    document.getElementById('decision').style.backgroundColor = "rgb(224, 93, 93)";
-  } else {
-    document.getElementById('decision').textContent= "No guidance";
-    document.getElementById('decision').style.backgroundColor = "rgb(195, 194, 135)";
-  }
+function evaluateBet() {
+    if (count > 0) {
+        setBet("Bet", "rgb(135, 195, 135)");
+    } else if (count < 0) {
+        setBet("Hold", "rgb(224, 93, 93)");
+    } else {
+        setBet("No guidance", "rgb(195, 194, 135)");
+    }
+    byId("decision").textContent = bet;
+    byId("decision").style.backgroundColor = rgb;
+    byId("currentCount").textContent = count;
 }
 
-function posButton() {
-  count++;
-  document.getElementById('currentCount').textContent= count;
-  betOrHold();
-}
-
-function negButton() {
-  count--;
-  document.getElementById('currentCount').textContent= count;
-  betOrHold();
-}
+function checkButton(id) { id === "plus" ? count += 1 : count -= 1; evaluateBet(); }
